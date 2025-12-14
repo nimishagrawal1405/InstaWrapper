@@ -1,0 +1,11 @@
+# Maven build output
+/target/
+
+# Eclipse / IDE files
+.classpath
+.project
+.settings/
+.idea/
+
+# Logs
+*.log

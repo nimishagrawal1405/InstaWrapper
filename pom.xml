@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.nimish</groupId>
+  <artifactId>instaWrapper</artifactId>
+  <version>0.1</version>
+  
+     <!-- Spring Boot base configuration -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.2</version>
+    </parent>
+			
+			  
+			  
+	 <!--This project will run using Java 17-->
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+		  	
+		  	 
+	<!--Each dependency = a library your project needs-->
+		  	 
+	<dependencies>
+	
+	<!-- Allows us to create APIs and run a server, 
+		   	    Without this — your server CANNOT run.-->
+		 	 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+	<!-- Allows us to call Facebook APIs (Graph API) -->
+		 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        
+    <!-- With Lombok you’d not need to write: getters, setters, constructors -->
+         
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+	
+	 <!-- Helps convert JSON to Java objects -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+	
+	</dependencies>
+	
+	
+	 <build>
+        <plugins>
+            <!-- Helps Maven run Spring Boot projects -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
